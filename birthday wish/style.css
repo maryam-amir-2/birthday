@@ -1,0 +1,200 @@
+/*
+ * New, Aesthetic birthday-style.css
+ * Focused on subtle transitions and a cleaner, modern look.
+ */
+
+/* Google Fonts - New aesthetic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lobster&display=swap');
+
+/* Keyframes for subtle effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e6e9f0);
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    width: 95%;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Updated Typography */
+.bismillah {
+    font-family: 'Lobster', cursive;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: #ff6f61; /* A warm, playful red */
+    margin-bottom: 0.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.verse {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.names h2 {
+    font-family: 'Lobster', cursive;
+    font-size: clamp(3rem, 12vw, 6rem);
+    color: #2a9d8f; /* A cool teal */
+    margin: 0.5rem 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.names h2:hover {
+    transform: scale(1.05);
+}
+
+.names p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #6a6a6a;
+}
+
+/* Refined Image Styling */
+.image-wrapper {
+    display: inline-block;
+    margin-top: 2rem;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.main-image {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.details {
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+.details h3 {
+    color: #2a9d8f;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin-bottom: 0.5rem;
+}
+
+.details p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #555;
+}
+
+.dua {
+    font-style: italic;
+    margin-top: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 600;
+    color: #ff6f61;
+}
+
+/* Modern Button Panel */
+.button-panel {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button-panel button {
+    padding: 12px 25px;
+    background: #4ecdc4; /* A light, appealing teal */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.button-panel button:hover {
+    background: #2a9d8f; /* A slightly darker teal on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Age Display Section */
+.age-display {
+    margin-top: 2.5rem;
+    text-align: center;
+    min-height: 250px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.age-display.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.age-img {
+    max-width: 250px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.age-img:hover {
+    transform: scale(1.03);
+}
+
+.age-desc {
+    margin-top: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: #555;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #999;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .button-panel {
+        gap: 8px;
+    }
+}
